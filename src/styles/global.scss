@@ -1,0 +1,112 @@
+:root {
+	--gray-1: rgba(0, 0, 0, 0.3);
+	--gray-2: #0d1116; // GitHub bg
+	--gray-3: #161b22; // GitHub header
+	--gray-4: #333;
+	--gray-5: #5a5a5a;
+	--gray-6: #8c9091;
+	--gray-7: #8d9293;
+	--gray-8: #b0b4b5;
+	--gray-9: rgb(231, 230, 230);
+	--gray-10: #eff2f2;
+	--gray-11: #f7f8fa;
+	
+	--text-color-1: var(--gray-4);
+	--text-color-2: var(--gray-5);
+	--text-color-3: var(--gray-7);
+	--text-color-4: var(--gray-8);
+
+	--action-color-1: #519093;
+	--action-color-2: #E1B033;
+	--action-color-3: #406FCB;
+
+	--action-color-1-inverted: white;
+	--action-color-2-inverted: var(--gray-4);
+	--action-color-3-inverted: white;
+
+	--background-color-1: white;
+	--background-color-2: var(--gray-10);
+
+	--shadow-color-1: rgba(0, 0, 0, 0.3);
+
+	--backdrop-background-color: var(--gray-1);
+	--backdrop-text-color: white;
+
+	--like-color: #ed4956;
+
+	--success-color: #87cc9b;
+	--error-color: #da615c;
+	--warning-color: #ebc962;
+	--info-color: #ebc962;
+}
+
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: var(--background-color-1);
+	color: var(--text-color-1);
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+		'Helvetica Neue', sans-serif;
+	overscroll-behavior: none;
+
+	transition: background-color 0.35s ease-in-out;
+
+	&.dark {
+		--text-color-1: var(--gray-10);
+		--text-color-2: var(--gray-8);
+
+		--text-color-4: var(--gray-5);
+	
+		--background-color-1: var(--gray-2);
+		--background-color-2: var(--gray-3);
+
+		--shadow-color-1: rgb(121 121 121 / 30%);
+	
+		// --backdrop-background-color: var(--gray-1);
+		// --backdrop-text-color: white;
+	}
+}
+
+a {
+	color: var(--action-color-1);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:visited {
+		filter: brightness(110%);
+	}
+}
+
+label {
+	display: block;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+
+	&:disabled {
+		color: #ccc;
+	}
+}

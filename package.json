@@ -1,0 +1,52 @@
+{
+  "name": "masterpeace",
+  "version": "0.0.1",
+  "scripts": {
+    "live": "npm run dev -- --host --port 3000",
+    "live:production": "npm run dev -- --host --port 3000 --mode production",
+    "dev": "vite dev",
+    "start": "npm run dev",
+    "start:development": "npm run dev -- --mode development",
+    "start:production": "npm run dev -- --mode production",
+    "build": "vite build",
+    "build:development": "vite build -- --mode development",
+    "build:production": "vite build -- --mode production",
+    "preview": "vite preview",
+    "sync": "svelte-kit sync",
+    "test": "playwright test",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.30.0",
+    "@sveltejs/adapter-static": "^2.0.0",
+    "@sveltejs/kit": "^1.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-svelte": "^2.9.0",
+    "sass": "^1.58.0",
+    "svelte-check": "^3.0.3",
+    "svelte-preprocess": "^5.0.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1"
+  },
+  "type": "module",
+  "dependencies": {
+    "@capacitor/android": "^4.6.3",
+    "@capacitor/cli": "^4.6.3",
+    "@capacitor/core": "^4.6.3",
+    "@capacitor/haptics": "^4.1.0",
+    "@capacitor/ios": "^4.6.3",
+    "@capacitor/preferences": "^4.0.2",
+    "@codetrix-studio/capacitor-google-auth": "^3.2.2",
+    "capacitor-plugin-glassfy": "^2.0.6",
+    "firebase": "^9.17.1"
+  }
+}
